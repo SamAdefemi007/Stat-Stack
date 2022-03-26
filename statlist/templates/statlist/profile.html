@@ -1,0 +1,10 @@
+{% extends 'statlist/base.html' %}
+{% load static %}
+
+{% block content %}
+    {%for player in players %}
+    <div>
+        {{player.playerName}}
+    </div>
+    {% endfor %}
+{% endblock %}
