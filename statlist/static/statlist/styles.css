@@ -7,6 +7,7 @@ nav {
   display: flex;
   align-items: center;
   margin-top: 0;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
 nav ul li {
@@ -96,6 +97,7 @@ hr {
 
 .fas {
   margin-right: 5px;
+  margin-left: 5px;
   color: burlywood;
 }
 
@@ -160,4 +162,22 @@ hr {
 
 .Top-card > div > span {
   font-size: xx-large;
+}
+
+.pagination {
+  margin-top: 50px;
+  text-align: center;
+  font-size: x-large;
+  margin-bottom: 50px;
+}
+.current {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.step-links a {
+  border: 2px solid goldenrod;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
 }
