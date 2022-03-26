@@ -15,7 +15,7 @@
 <body>
     {% block navbar %}
     <nav>
-        <img id="logo" src="{% static 'images/statslogo.png' %}" alt="">
+        <a href="{% url 'home' %}"><img id="logo" src="{% static 'images/statslogo.png' %}" alt=""></a>
         <ul>
             <li><a href="{% url 'profile' %}"><i class="fas fa-user"></i>Player Profile</a></li>
             <li><a href="#"><i class="fas fa-globe"></i>National Team</a></li>

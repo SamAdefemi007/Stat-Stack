@@ -2,9 +2,41 @@
 {% load static %}
 
 {% block content %}
-    {%for player in players %}
-    <div>
-        {{player.playerName}}
+<h1>TOP 10 FIFA World Best Footballers</h1>
+    <div class="wrapper">
+        
+        {%for player in players %}
+        <div class="player_Card">
+            <div class="Top-card">
+                <img src="{{player.playerPhoto}}" alt="">
+                <div>
+                    <span>{{player.skills.rating}}</span>
+                    <img id="small-logo" src="{{player.playerCountry.countryFlag}}" alt="">
+                    <img id="small-logo2" src="{{player.playerClub.clubLogo}}" alt="">
+                </div>
+
+            </div>
+            
+            <p>{{player.playerName}}</p>
+            <hr>
+            <div class="attribute">
+                <div>
+                    <p>{{player.skills.pace}} PAC</p>
+                    <p>{{player.skills.shooting}} SHO</p>
+                    <p>{{player.skills.passing}} PAS</p>
+                </div>
+                
+                <div>
+                    <p>{{player.skills.dribbling}} DRI</p>
+                    <p>{{player.skills.defending}} DEF</p>
+                    <p>{{player.skills.strength}} PHY</p>
+                </div>
+
+            </div>
+            
+            
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
+   
 {% endblock %}
