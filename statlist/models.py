@@ -10,7 +10,7 @@ class Country(models.Model):
     countryFlag = models.URLField(max_length=1000)
 
     def __str__(self):
-        return self.countryName
+        return f"{self.countryName}"
 
 
 class Club(models.Model):
@@ -19,7 +19,7 @@ class Club(models.Model):
     clubLogo = models.URLField(max_length=1000)
 
     def __str__(self):
-        return self.clubName
+        return f"{self.clubName}"
 
 
 class Skills(models.Model):
@@ -39,13 +39,13 @@ class Skills(models.Model):
 
 class TransferMarket(models.Model):
     transferID = models.AutoField(primary_key=True)
-    value = models.IntegerField(default=0, null=True)
-    contractExpiry = models.DateField()
+    value = models.CharField(max_length=10, null=True)
+    contractExpiry = models.IntegerField()
     wages = models.CharField(max_length=10)
     releaseClause = models.CharField(max_length=10)
 
     def __str__(self):
-        return self.value, self.wages, self.releaseClause, self.contractExpiry
+        return f"{self.value, self.wages, self.releaseClause, self.contractExpiry}"
 
 
 class Player(models.Model):
@@ -59,6 +59,8 @@ class Player(models.Model):
     playerClub = models.ForeignKey(Club, on_delete=models.SET_NULL, null=True)
     skills = models.OneToOneField(
         Skills, on_delete=models.SET_NULL, null=True)
+    playerValue = models.OneToOneField(
+        TransferMarket, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
-        return self.playerName, self.playerAge, self.playerPosition
+        return f"{self.playerName, self.playerAge, self.playerPosition}"
