@@ -15,3 +15,7 @@ def profile(request):
     page_num = request.GET.get("page")
     page_obj = paginator.get_page(page_num)
     return render(request, 'statlist/profile.html', {'players': page_obj})
+
+
+def country(request):
+    return render(request, 'statlist/country.html')
