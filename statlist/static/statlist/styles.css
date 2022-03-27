@@ -181,3 +181,19 @@ hr {
   border-radius: 10px;
   text-decoration: none;
 }
+
+.squad {
+  background-image: url("../images/squad.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 600px;
+  color: #e9cc74;
+  transform: rotate(90deg);
+  position: relative;
+  top: 350px;
+  left: 200px;
+}
+
+.show-list {
+  display: flex;
+}

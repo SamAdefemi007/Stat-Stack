@@ -2,5 +2,47 @@
 {% load static %}
 
 {% block content %}
+<h4>Please Select the country</h4>
+<form action={% url 'country' %} method="POST">
+    {% csrf_token %}
+    <select name="countrySet" id="countrySet" selected = "selected">
+        {% for country in countries %}
+        <option value={{country}}>{{country}}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Check Squad">
+</form>
+
+{% if players %}
+<div class="show-list">
+    <div>
+        <table>
+            <tr>
+                <th>Player Name</th>
+                <th>Player Position</th>
+                <th>Preffered Foot</th>
+            </tr>
+
+           
+                {% for player in players %}
+            <tr>
+                <td>{{player.playerName}}</td>
+                <td>{{player.playerPosition}}</td>
+                <td>{{player.skills.prefferedFoot}}</td>
+            </tr>
+            
+            
+            {% endfor %}
+        </table>
+    </div>
+    <div class="squad">
+        {% for player in players %}
+        {{player.playerName}}
+        {{player.skills.position}}
+        {% endfor %}
+    </div>
+</div>
+   
+{% endif %}
 
 {% endblock %}

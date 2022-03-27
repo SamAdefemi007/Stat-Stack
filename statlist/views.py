@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Player
+from .models import Player, Country
 from django.core.paginator import Paginator
 
 # Create your views here.
@@ -18,4 +18,11 @@ def profile(request):
 
 
 def country(request):
-    return render(request, 'statlist/country.html')
+    countryObj = Country.objects.all().values_list(
+        "countryName", flat=True).distinct()
+    playerobj = {}
+    if request.method == "POST":
+        countryname = request.POST["countrySet"]
+        playerobj = Player.objects.all().filter(
+            playerCountry__countryName=countryname).order_by("-skills__rating")
+    return render(request, 'statlist/country.html', {'countries': countryObj, 'players': playerobj})

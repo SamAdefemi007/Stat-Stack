@@ -12,6 +12,9 @@ class Country(models.Model):
     def __str__(self):
         return f"{self.countryName}"
 
+    class Meta:
+        ordering = ('countryName',)
+
 
 class Club(models.Model):
     clubID = models.AutoField(primary_key=True)
