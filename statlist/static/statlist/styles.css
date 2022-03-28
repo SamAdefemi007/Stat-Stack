@@ -181,19 +181,36 @@ hr {
   border-radius: 10px;
   text-decoration: none;
 }
+form {
+  margin-bottom: 20px;
+}
 
 .squad {
-  background-image: url("../images/squad.png");
+  background-image: url("../images/squad.jpeg");
   background-size: contain;
   background-repeat: no-repeat;
   height: 600px;
+  width: 500px;
   color: #e9cc74;
-  transform: rotate(90deg);
-  position: relative;
-  top: 350px;
-  left: 200px;
+  margin-left: 100px;
 }
 
 .show-list {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.formation {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  justify-content: space-evenly;
+  height: 70%;
+}
+
+.formation > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }

@@ -17,10 +17,10 @@
     <nav>
         <a href="{% url 'home' %}"><img id="logo" src="{% static 'images/statslogo.png' %}" alt=""></a>
         <ul>
-            <li><a href="{% url 'profile' %}"><i class="fas fa-user"></i>Player Profile</a></li>
-            <li><a href="{% url 'country' %}"><i class="fas fa-globe"></i>National Team</a></li>
-            <li><a href="#"><i class="fas fa-futbol"></i>Football Clubs</a></li>
-            <li><a href="#"><i class="fas fa-people-arrows"></i>Transfer Market</a></li>
+            <a href="{% url 'profile' %}"><li><i class="fas fa-user"></i>Player Profile</li></a>
+            <a href="{% url 'country' %}"><li><i class="fas fa-globe"></i>National Team</li></a>
+            <a href="#"><li><i class="fas fa-futbol"></i>Football Clubs</li></a>
+            <a href="#"><li><i class="fas fa-people-arrows"></i>Transfer Market</li></a>
         </ul>
         
     </nav>

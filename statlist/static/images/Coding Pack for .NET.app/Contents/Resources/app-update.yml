@@ -1,0 +1,4 @@
+owner: dotnet
+repo: vscode-dotnet-installer
+provider: github
+updaterCacheDirName: vscode-dotnet-installer-updater
