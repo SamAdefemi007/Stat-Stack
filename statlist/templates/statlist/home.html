@@ -2,9 +2,10 @@
 {% load static %}
 {% block content %}
     <div class="index-content">
-        <div>
+        <div class="info-text">
             <h1>STATS STACK</h1>
             <p>We provide exclusive access to the most reliable information about football players, their profile, FIFA rating and current transfer value </p>
+            <a id="home-btn" href="{% url 'profile' %}"><button>Check Players Profile</button></a>
         </div>
         <div id="img-block">
             <img class="bounce-img bounce2" src="{% static 'images/football.png' %}" alt="">

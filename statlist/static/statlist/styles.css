@@ -42,6 +42,7 @@ nav ul li a {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   margin-left: 20px;
   margin-top: 10px;
+  margin-right: 200px;
 }
 
 #logo:hover {
@@ -66,10 +67,6 @@ nav ul li a {
   color: white;
 }
 
-hr {
-  margin-bottom: 0;
-}
-
 .bounce2 {
   animation: bounce2 2s ease infinite;
 }
@@ -91,8 +88,8 @@ hr {
 
 .bounce-img {
   max-width: 120px;
-  margin-left: 290px;
-  margin-top: 130px;
+  margin-left: 350px;
+  margin-top: 150px;
 }
 
 .fas {
@@ -198,7 +195,8 @@ form {
 .show-list {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
+  margin-bottom: 100px;
 }
 
 .formation {
@@ -213,4 +211,126 @@ form {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../images/bg.jpeg");
+  background-size: cover;
+  height: 600px;
+  background-repeat: no-repeat;
+}
+
+.details-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.profile-img {
+  border-bottom: 1px solid salmon;
+  width: 100%;
+}
+.profile-img > img {
+  width: 200px;
+  margin-left: 40%;
+}
+
+.details-card div {
+  margin-right: 100px;
+}
+
+.field-name {
+  font-size: larger;
+  font-family: inter, sans-serif;
+  font-weight: 700;
+  color: black;
+}
+
+.field-value {
+  color: blue;
+  font-weight: 700;
+}
+
+.country-info {
+  font-size: xx-large;
+  font-weight: 700;
+  color: darkcyan;
+}
+
+.info-text {
+  text-align: center;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.info-text > p {
+  width: 600px;
+  margin-bottom: 50px;
+}
+
+#home-btn button {
+  width: 250px;
+  height: 70px;
+  font-size: larger;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  background-color: #e9cc74;
+  font-weight: 400;
+  font-style: italic;
+}
+
+#home-btn button:hover {
+  background-color: #2ee59d;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  transform: translateX(7px);
+}
+
+#player-link {
+  text-decoration: none;
+}
+
+form > select {
+  height: 40px;
+  margin-left: 30px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.head-c {
+  margin-left: 30px;
+}
+
+form > input {
+  border-radius: 10px;
+  padding: 6px;
+  font-size: large;
+}
+
+form > input:hover {
+  background-color: #e9cc74;
+}
+
+thead {
+  background-color: lightblue;
+  margin-bottom: 10px;
+}
+
+tbody {
+  background-color: whitesmoke;
+}
+tbody > tr > td {
+  padding: 5px;
+  font-size: medium;
+}
+th {
+  text-align: left;
 }

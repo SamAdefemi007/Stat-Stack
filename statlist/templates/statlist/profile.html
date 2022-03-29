@@ -6,9 +6,11 @@
     <div class="wrapper">
         
         {%for player in players %}
+        <a id="player-link" href="profile/{{player.playerID}}/">
         <div class="player_Card">
             <div class="Top-card">
                 <img src="{{player.playerPhoto}}" alt="">
+            
                 <div>
                     <span>{{player.skills.rating}}</span>
                     <img id="small-logo" src="{{player.playerCountry.countryFlag}}" alt="">
@@ -36,6 +38,7 @@
             
             
         </div>
+        </a>
         {% endfor %}
     </div>
 
