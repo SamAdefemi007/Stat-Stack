@@ -28,11 +28,9 @@ players with relevant data associated with them, such as age, overall rating, co
 [Back To The Top](#read-me-template)
 
 ---
-
 ## How To Use
-Client is 
 
-```
+
 [Back To The Top](#read-me-template)
 
 ---
@@ -43,8 +41,7 @@ Client is
 ---
 
 ## License
-
-The Unlicesned
+The Unlicensed
 
 [Back To The Top](#read-me-template)
 
