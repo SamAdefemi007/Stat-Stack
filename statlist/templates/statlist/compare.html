@@ -1,0 +1,128 @@
+{% extends 'statlist/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="top-default">
+    <div class="main-default">
+        {% if player1 and player2 %}
+    
+        <div id="player1" class="default-div">
+            <img src="{{player1.playerPhoto}}" alt="">
+            <p><span class="field-name">Name:</span> <span class="field-value">{{player1.playerName}}</span></p>
+            <p><span class="field-name">Age:</span> <span class="field-value">{{player1.playerAge}}</span></p>
+            <p><span class="field-name">Position:</span> <span class="field-value">{{player1.playerPosition}}</span></p>
+            <p><span class="field-name">Nationality:</span><span class="field-value">{{player1.playerCountry}} </span><img
+                    src="{{player1.playerCountry.countryFlag}}" alt=""></p>
+            <p><span class="field-name">Club:</span><span class="field-value">{{player1.playerClub}}</span> <img
+                    src="{{player1.playerClub.clubLogo}}" alt=""></p>
+            <p><span class="field-name">Overall Rating:</span> <span class="field-value">{{player1.skills.rating}}</span>
+            </p>
+            <p><span class="field-name">Preffered Foot:</span> <span
+                    class="field-value">{{player1.skills.prefferedFoot}}</span></p>
+            <p><span class="field-name">Pace:</span> <span class="field-value">{{player1.skills.pace}}</span></p>
+            <p><span class="field-name">Shooting:</span><span class="field-value">{{player1.skills.shooting}}</span></p>
+            <p><span class="field-name">Passing:</span> <span class="field-value">{{player1.skills.passing}}</span></p>
+            <p><span class="field-name">Strength:</span> <span class="field-value">{{player1.skills.strength}}</span></p>
+            <p><span class="field-name">Dribbling:</span> <span class="field-value">{{player1.skills.dribbling}}</span></p>
+            <p><span class="field-name">Defending:</span> <span class="field-value">{{player1.skills.defending}}</span></p>
+            <p><span class="field-name">Market Value:</span> <span class="field-value">{{player1.playerValue.value}}</span>
+            </p>
+            <p><span class="field-name">Wages:</span> <span class="field-value">{{player1.playerValue.wages}}</span></p>
+            <p><span class="field-name">Release Clause:</span> <span
+                    class="field-value">{{player1.playerValue.releaseClause}}</span>
+            </p>
+            <p><span class="field-name">Contract Expiry:</span> <span
+                    class="field-value">{{player1.playerValue.contractExpiry}}</span></p>
+    
+        </div>
+        <div id="player2" class="default-div">
+            <img src="{{player2.playerPhoto}}" alt="">
+            <p><span class="field-name">Name:</span> <span class="field-value">{{player2.playerName}}</span></p>
+            <p><span class="field-name">Age:</span> <span class="field-value">{{player2.playerAge}}</span></p>
+            <p><span class="field-name">Position:</span> <span class="field-value">{{player2.playerPosition}}</span></p>
+            <p><span class="field-name">Nationality:</span><span class="field-value">{{player2.playerCountry}} </span><img
+                    src="{{player2.playerCountry.countryFlag}}" alt=""></p>
+            <p><span class="field-name">Club:</span><span class="field-value">{{player2.playerClub}}</span> <img
+                    src="{{player2.playerClub.clubLogo}}" alt=""></p>
+            <p><span class="field-name">Overall Rating:</span> <span class="field-value">{{player2.skills.rating}}</span>
+            </p>
+            <p><span class="field-name">Preffered Foot:</span> <span
+                    class="field-value">{{player2.skills.prefferedFoot}}</span></p>
+            <p><span class="field-name">Pace:</span> <span class="field-value">{{player2.skills.pace}}</span></p>
+            <p><span class="field-name">Shooting:</span><span class="field-value">{{player2.skills.shooting}}</span></p>
+            <p><span class="field-name">Passing:</span> <span class="field-value">{{player2.skills.passing}}</span></p>
+            <p><span class="field-name">Strength:</span> <span class="field-value">{{player2.skills.strength}}</span></p>
+            <p><span class="field-name">Dribbling:</span> <span class="field-value">{{player2.skills.dribbling}}</span></p>
+            <p><span class="field-name">Defending:</span> <span class="field-value">{{player2.skills.defending}}</span></p>
+            <p><span class="field-name">Market Value:</span> <span class="field-value">{{player2.playerValue.value}}</span>
+            </p>
+            <p><span class="field-name">Wages:</span> <span class="field-value">{{player2.playerValue.wages}}</span></p>
+            <p><span class="field-name">Release Clause:</span> <span
+                    class="field-value">{{player2.playerValue.releaseClause}}</span>
+            </p>
+            <p><span class="field-name">Contract Expiry:</span> <span
+                    class="field-value">{{player2.playerValue.contractExpiry}}</span></p>
+    
+        </div>
+    
+    </div>
+    <div class="checkothers">
+        <a href="{% url 'compare' %}"><button>Check other players</button></a>
+    </div>
+</div>
+
+
+
+
+{% else %}
+
+<div class="else-default">
+
+    {% if messages %}
+        {% for message in messages%}
+         <p id="message">{{message}}</p>
+        {% endfor %}
+    {% endif %}
+    <div class="main-default">
+        <div class="default-div">
+            <img src="../../static/images/default.png" alt="">
+        
+        </div>
+        <div id="div-2" class="default-div">
+            <img src="../../static/images/default.png" alt="">
+        
+        </div>
+
+    </div>
+    
+    <div>
+        <form action="">
+            <div class="form-div">
+                <select class="compare-select" name="player1" required>
+                    <option value="" disabled selected>Select a Player</option>
+                    {% for player in players %}
+                    <option value="{{player}}">{{player}}</option>
+                    {% endfor %}
+                </select>
+                <select class="compare-select" name="player2" required>
+                    <option value="" disabled selected>Select a Player</option>
+                    {% for player in players %}
+                    <option value="{{player}}">{{player}}</option>
+                    {% endfor %}
+                </select>
+
+            </div>
+            
+            <input class="select-input" type="submit" value="Compare Players">
+        </form>
+    
+    </div>
+</div>
+
+{% endif%}
+
+{% block footer %}
+{% endblock %}
+
+{% endblock %}

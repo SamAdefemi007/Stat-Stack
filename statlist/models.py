@@ -52,6 +52,9 @@ class TransferMarket(models.Model):
 
 
 class Player(models.Model):
+    class Meta:
+        ordering = ('-skills__rating',)
+
     playerID = models.AutoField(primary_key=True)
     playerName = models.CharField(max_length=200)
     playerAge = models.IntegerField(default=0)

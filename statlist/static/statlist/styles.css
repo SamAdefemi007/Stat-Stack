@@ -16,14 +16,16 @@ body {
 }
 nav {
   display: flex;
-  align-items: center;
   margin-top: 0;
   box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+  display: flex;
 }
 
 nav ul li {
   display: inline-block;
-  margin-right: 70px;
+  margin-right: 40px;
   font-weight: 600;
   font-size: 1.3em;
   padding: 15px;
@@ -356,9 +358,91 @@ footer {
   border: 1px solid burlywood;
   margin-top: 20px;
   text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
   font-style: italic;
+}
+
+.main-default {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.default-div {
+  width: 20%;
+  border-radius: 30px;
+}
+
+.default-div > img {
+  max-width: 300px;
+  height: 250px;
+  border-radius: 30px;
+  margin-right: 40px;
+}
+
+.compare-btn > button {
+  font-size: xx-large;
+}
+
+.form-div {
+  display: flex;
+  justify-content: center;
+}
+
+.form-div > select {
+  width: 300px;
+  height: 30px;
+}
+
+.select-input {
+  margin-left: 40%;
+  margin-top: 20px;
+}
+
+.checkothers {
+  margin: auto;
+}
+.checkothers > a > button {
+  font-size: x-large;
+  padding: 15px;
+  border-radius: 25px;
+  margin: 30px 20px;
+}
+
+.checkothers > a > button:hover {
+  background-color: gold;
+}
+.top-default {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.else-default {
+  display: flex;
+  flex-direction: column;
+}
+
+.compare-select {
+  margin-left: 100px;
+}
+
+#div-2 {
+  margin-left: 220px;
+}
+
+#player2 {
+  margin-left: 70px;
+  border: 2px solid sandybrown;
+  padding-left: 80px;
+}
+
+#player1 {
+  border: 2px solid sandybrown;
+  padding-left: 40px;
+}
+
+#message {
+  background-color: lightcoral;
+  padding: 10px;
 }
