@@ -46,7 +46,7 @@ def club(request):
         playerobj = Player.objects.all().filter(
             playerClub__clubName=clubname).order_by("-skills__rating")
 
-    return render(request, 'statlist/club.html', {'clubs': clubObj, 'players': playerobj, 'clubname': clubname, 'clublogo': clublogo})
+    return render(request, 'statlist/club.html', {'clubs': sorted(clubObj), 'players': playerobj, 'clubname': clubname, 'clublogo': clublogo})
 
 
 def details(request, id):
